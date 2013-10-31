@@ -19,7 +19,7 @@
 
 // Sample configuration file. Copy it to config.inc.php and modify to suit your needs
 $id = 1;
-$config = array(
+return array(
 
 	// List of pool accounts. You can have multiple accounts on the same pools as long as they have different ids.
 	'pools' => array(
