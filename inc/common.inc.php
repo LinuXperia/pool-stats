@@ -30,6 +30,7 @@ class PoolStatException extends Exception {
 require $env->includePath . '/blocks.inc.php';
 require $env->includePath . '/store.slush.inc.php';
 require $env->includePath . '/store.btcguild.inc.php';
+require $env->includePath . '/store.ghash.inc.php';
 
 try {
 	$env->init($env->includePath . '/../config.inc.php');
