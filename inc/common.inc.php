@@ -114,11 +114,11 @@ class Env {
 	}
 
 
-	public function error($exception, $code = 0) {
+	public function error($exception, $code = 0, $context = "") {
 		if ($exception instanceof Exception)
-			$message = get_class($exception) . ": " . $exception->getMessage();
+			$message = ($context ? "[".$context."] ":"") . get_class($exception) . ": " . $exception->getMessage();
 		else
-			$message = (string)$exception;
+			$message = ($context ? "[".$context."] ":"") . (string)$exception;
 
 		if ($this->headless) {
 			echo date("Y-m-d H:i:s") . "\tError - $message\n";
