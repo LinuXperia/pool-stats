@@ -29,8 +29,9 @@ if (!is_writable($dataDir))
 	$env->error("Directory '$dataDir' not writable!", 3);
 
 $params = $_SERVER['argv'];
-$hasParams = count($params)>0;
 array_shift($params);
+
+$hasParams = count($params)>0;
 
 $context = "";
 try {
